@@ -16,7 +16,6 @@ const TodoList = ({ initialTodos = [] }) => {
       <CurrentTodosList todos={todos} />
       <form onSubmit={addNewTodo}>
         <TodoInput
-          name="new_todo"
           value={newTodo}
           onChange={(event) => setNewTodo(event.target.value)}
           placeholder="Add something new"
