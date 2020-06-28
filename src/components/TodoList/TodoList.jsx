@@ -22,9 +22,7 @@ const TodoList = ({ initialTodos = [] }) => {
           placeholder="Add something new"
           autoComplete="off"
         />
-        <AddTodoButton disabled={newTodo === ""} type="submit">
-          Add
-        </AddTodoButton>
+        <AddTodoButton type="submit">Add</AddTodoButton>
       </form>
     </div>
   );
