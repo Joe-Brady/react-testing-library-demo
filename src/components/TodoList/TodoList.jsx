@@ -20,6 +20,7 @@ const TodoList = ({ initialTodos = [] }) => {
           value={newTodo}
           onChange={(event) => setNewTodo(event.target.value)}
           placeholder="Add something new"
+          autoComplete="off"
         />
         <AddTodoButton disabled={newTodo === ""} type="submit">
           Add
