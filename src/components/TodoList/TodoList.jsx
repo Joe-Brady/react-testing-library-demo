@@ -28,6 +28,22 @@ const TodoList = ({ initialTodos = [] }) => {
   );
 };
 
+export const CurrentTodosList = ({ todos }) => (
+  <div>
+    {todos.map((todo) => (
+      <CurrentTodoItem key={todo}>{todo}</CurrentTodoItem>
+    ))}
+  </div>
+);
+
+export const CurrentTodoItem = styled("div")`
+  background-color: #002f01;
+  border-radius: 100px;
+  margin: 10px 0;
+  padding: 15px 20px;
+  color: white;
+`;
+
 export const TodoInput = styled("input")`
   border-radius: 100px;
   padding: 15px 20px;
@@ -47,22 +63,6 @@ export const AddTodoButton = styled("button")`
   &:disabled {
     background-color: grey;
   }
-`;
-
-export const CurrentTodosList = ({ todos }) => (
-  <div>
-    {todos.map((todo) => (
-      <CurrentTodoItem key={todo}>{todo}</CurrentTodoItem>
-    ))}
-  </div>
-);
-
-export const CurrentTodoItem = styled("div")`
-  background-color: #002f01;
-  border-radius: 100px;
-  margin: 10px 0;
-  padding: 15px 20px;
-  color: white;
 `;
 
 export default TodoList;
